@@ -7,7 +7,6 @@ namespace App\Http\Controllers;
 use App\Models\Messages;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Auth;
@@ -41,6 +40,4 @@ class ChatController extends BaseController
       $messages = DB::select('select * from messages where Data >= DATE_ADD(CURDATE(), INTERVAL -3 DAY)');
       return view('data', ['messages' => $messages]);
     }
-
-
 }

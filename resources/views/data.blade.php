@@ -65,7 +65,7 @@ word-break: break-all;
     <li  class="container darck">
     @endif
     <div class="perenos">{{ $message->Sms}}</div>
-    <span class="time-right">{{ $message->Email  }}({{$message->Data}})</span>
+    <span class="time-right">{{ $message->Email  }}  {{$message->Data}}</span>
      </li>
     @endforeach
 
